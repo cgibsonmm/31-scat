@@ -4,7 +4,6 @@ import { NativeRouter, Route } from "react-router-native";
 
 import Welcome from "./components/Welcome";
 import Table from "./components/Table";
-import CardBack from "./assets/images/cardBack.png";
 
 export default function App() {
   return (
