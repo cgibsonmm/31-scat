@@ -20,7 +20,7 @@ const Table = () => {
       <View style={styles.table}>
         <Text>Hello</Text>
         {playerHands.map((playerHand, index) => (
-          <View style={styles.hand}>
+          <View style={index == 2 ? styles.hand : styles.otherHand}>
             {playerHand.map((card) => (
               <>
                 <Image
@@ -63,6 +63,12 @@ let styles = StyleSheet.create({
   hand: {
     display: "flex",
     flexDirection: "row",
+  },
+  otherHand: {
+    display: "flex",
+    flexDirection: "row",
+    backgroundColor: "black",
+    position: "relative",
   },
 });
 
