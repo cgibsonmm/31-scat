@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Link } from "react-router-native";
 
 const Welcome = () => {
@@ -7,11 +7,20 @@ const Welcome = () => {
     <View>
       <Text>Welcome</Text>
 
-      <Link to="/new_game" component={TouchableOpacity}>
+      <Link style={styles.button} to="/new_game" component={TouchableOpacity}>
         <Text>New Game</Text>
+      </Link>
+      <Link style={styles.button} to="/socket" component={TouchableOpacity}>
+        <Text>Connect</Text>
       </Link>
     </View>
   );
 };
 
 export default Welcome;
+
+const styles = StyleSheet.create({
+  button: {
+    padding: 20,
+  },
+});
